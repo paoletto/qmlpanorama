@@ -1,0 +1,19 @@
+= QML Panorama viewer =
+
+This is an implementation of a spherical viewer
+for equirectangular pictures, also known as Photo Spheres,
+or 360 pictures, in form of a QML element.
+It can also display cube maps.
+
+The element is implemented as a subclass of
+QQuickFramebufferObject, and therefore the rendering is performed
+entirely offscreen.
+It is OpenGL ES 2.0 compatible, so it's supposed to run on all
+platforms supported by Qt.
+
+The support for equirectangular images and cube maps is implemented
+in both cases by using a textured proxy geometry, in the first case
+using a sphere and in the second case using a cube, quite like common
+skyboxes.
+
+See app for how to use the element in a working example
